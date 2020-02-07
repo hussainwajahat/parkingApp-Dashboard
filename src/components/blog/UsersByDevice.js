@@ -51,7 +51,7 @@ class UsersByDevice extends React.Component {
     return (
       <Card small className="h-100">
         <CardHeader className="border-bottom">
-          <h6 className="m-0">{title}</h6>
+          <h6 className="m-0">Parking X Dashboard</h6>
         </CardHeader>
         <CardBody className="d-flex py-0">
           <canvas

@@ -14,7 +14,7 @@ import {
 const Discussions = ({ title, discussions }) => (
   <Card small className="blog-comments">
     <CardHeader className="border-bottom">
-      <h6 className="m-0">{title}</h6>
+      <h6 className="m-0">Parking X Dashboard</h6>
     </CardHeader>
 
     <CardBody className="p-0">

@@ -14,7 +14,7 @@ const BlogOverview = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
+      <PageTitle title="Parking X Dashboard" subtitle="Dashboard" className="text-sm-left mb-3" />
     </Row>
 
     {/* Small Stats Blocks */}
@@ -75,7 +75,7 @@ BlogOverview.propTypes = {
 BlogOverview.defaultProps = {
   smallStats: [
     {
-      label: "Posts",
+      label: "Today's Booked Slots",
       value: "2,390",
       percentage: "4.7%",
       increase: true,
@@ -93,7 +93,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Pages",
+      label: "Available Slots",
       value: "182",
       percentage: "12.4",
       increase: true,
@@ -111,7 +111,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Comments",
+      label: "Booked Slots",
       value: "8,147",
       percentage: "3.8%",
       increase: false,
@@ -130,7 +130,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "New Customers",
+      label: "Register Users",
       value: "29",
       percentage: "2.71%",
       increase: false,
@@ -149,7 +149,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Subscribers",
+      label: "New Users",
       value: "17,281",
       percentage: "2.4%",
       increase: false,

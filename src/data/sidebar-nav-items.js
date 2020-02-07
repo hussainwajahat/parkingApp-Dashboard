@@ -1,18 +1,18 @@
 export default function() {
   return [
     {
-      title: "Blog Dashboard",
+      title: "Dashboard",
       to: "/blog-overview",
       htmlBefore: '<i class="material-icons">edit</i>',
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
+      title: "Add Slots",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
       to: "/blog-posts",
     },
     {
-      title: "Add New Post",
+      title: "Update Slots",
       htmlBefore: '<i class="material-icons">note_add</i>',
       to: "/add-new-post",
     },
