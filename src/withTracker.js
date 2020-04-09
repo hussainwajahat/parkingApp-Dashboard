@@ -4,6 +4,7 @@ import GoogleAnalytics from "react-ga";
 GoogleAnalytics.initialize(process.env.REACT_APP_GAID || "UA-115105611-2");
 
 const withTracker = (WrappedComponent, options = {}) => {
+
   const trackPage = page => {
     if (process.env.NODE_ENV !== "production") {
       return;
@@ -20,9 +21,11 @@ const withTracker = (WrappedComponent, options = {}) => {
 
   // eslint-disable-next-line
   const HOC = class extends Component {
+  
     componentDidMount() {
       // eslint-disable-next-line
       const page = this.props.location.pathname + this.props.location.search;
+      {console.log(page)}
       trackPage(`${BASENAME}${page}`);
     }
 
