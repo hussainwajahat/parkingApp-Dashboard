@@ -75,7 +75,7 @@ handleSubmit = evt => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
 };
-fetch('http://localhost:3000/locations/addLocations', requestOptions)
+fetch(`${process.env.REACT_APP_BASEURL}/locations/addLocations`, requestOptions)
   .then(response => {
       return history.push("/slots");
   })
