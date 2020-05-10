@@ -25,7 +25,8 @@ function Copyright() {
     </Typography>
   );
 }
-class login extends React.Component {
+class Login extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
     constructor(props) {
       super(props);
     }
@@ -122,4 +123,4 @@ const classes = makeStyles(theme => ({
   },
 }));
 
-export default login;
+export default Login;
