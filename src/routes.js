@@ -17,7 +17,7 @@ import BlogPosts from "./views/BlogPosts";
 
 export default [
   {
-    path: "/",
+    path: "/dashboard",
     exact: true,
     layout: DefaultLayout,
     component: () => <Redirect to="/blog-overview" />
@@ -28,9 +28,13 @@ export default [
     component: signUp
   },
   {
+    path: "/",
+    exact:true,
+    layout: Login
+  },
+  {
     path: "/login",
-    layout: DefaultLayout,
-    component: Login
+    layout:  () => <Redirect to="/login" />
   },
   {
     path: "/blog-overview",

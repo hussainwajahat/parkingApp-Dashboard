@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+       Parking X
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -29,10 +29,35 @@ class Login extends React.Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
       super(props);
+      this.state = {
+        email : '',
+        password : ''
+      }
     }
+    handleLogin = (event) => {
+      event.preventDefault()
+      console.log(this.state)
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:  JSON.stringify(this.state)
+    };
+      fetch(`${process.env.REACT_APP_BASEURL}/login`,requestOptions)
+      .then(response => {
+          return response.json();
+      })
+      .then((response) => {
+        console.log(response)
+        sessionStorage.setItem('auth',response)
+        this.props.history.push("/dashboard")
+      })
+      .catch(error =>{
+          console.log(error)
+      })
+    }
+    
   
     render() {
-
       return (
         <Container component="main" maxWidth="xs">
         <CssBaseline />
@@ -43,16 +68,18 @@ class Login extends React.Component {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} onSubmit={this.handleLogin} noValidate>
             <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
               id="email"
+              value={this.state.email}
               label="Email Address"
               name="email"
               autoComplete="email"
+              onChange= { (ev) => {this.setState({email:ev.target.value})} }
               autoFocus
             />
             <TextField
@@ -64,11 +91,9 @@ class Login extends React.Component {
               label="Password"
               type="password"
               id="password"
+              value={this.state.password}
+              onChange= { (ev) => {this.setState({password:ev.target.value})} }
               autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
             />
             <Button
               type="submit"
@@ -79,18 +104,6 @@ class Login extends React.Component {
             >
               Sign In
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
-            </Grid>
           </form>
         </div>
         <Box mt={8}>

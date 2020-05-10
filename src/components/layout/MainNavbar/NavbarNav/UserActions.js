@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 import {
   Dropdown,
   DropdownToggle,
@@ -10,7 +10,7 @@ import {
   NavLink
 } from "shards-react";
 
-export default class UserActions extends React.Component {
+class UserActions extends React.Component {
   constructor(props) {
     super(props);
 
@@ -52,7 +52,7 @@ export default class UserActions extends React.Component {
             <i className="material-icons">&#xE896;</i> Transactions
           </DropdownItem>
           <DropdownItem divider />
-          <DropdownItem tag={Link} to="/" className="text-danger">
+          <DropdownItem onClick={()=>{sessionStorage.removeItem('auth');this.props.history.push("/")}} className="text-danger">
             <i className="material-icons text-danger">&#xE879;</i> Logout
           </DropdownItem>
         </Collapse>
@@ -60,3 +60,5 @@ export default class UserActions extends React.Component {
     );
   }
 }
+
+export default withRouter(UserActions)
