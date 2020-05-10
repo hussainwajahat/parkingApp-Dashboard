@@ -1,7 +1,5 @@
-/* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from "react";
-import AddLocation from "../components/user-profile-lite/addLocation";
 import LocationList from "../components/user-profile-lite/locationLists";
 import {
   Container,

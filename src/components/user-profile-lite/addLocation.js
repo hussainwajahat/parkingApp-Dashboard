@@ -77,7 +77,7 @@ handleSubmit = evt => {
 };
 fetch('http://localhost:3000/locations/addLocations', requestOptions)
   .then(response => {
-      return history.push('/slots');
+      return history.push("/slots");
   })
   .catch(error =>{
       console.log(error)
