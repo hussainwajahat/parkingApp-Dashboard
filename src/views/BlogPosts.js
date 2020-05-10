@@ -26,10 +26,10 @@ class AddSlot extends React.Component {
       <Container fluid className="main-content-container px-4 pb-4">
       {/* Page Header */}
       <Row noGutters className="page-header py-4">
-        <PageTitle sm="4" title="Slots" className="text-sm-left" />
+        <PageTitle sm="4" title="Locations" className="text-sm-left" />
       </Row>
       <Row className="" style={{"padding-bottom": "10px","margin-left":"0px"}}> 
-        <a href="/add-slot" className="btn btn-primary">Add Slot</a>
+        <a href="/add-slot" className="btn btn-primary">Add Location</a>
       </Row>
   
       <Row>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-    //CardHeader,
+    CardHeader,
     Card,
     CardBody
 } from "shards-react";
@@ -29,8 +29,8 @@ componentDidMount() {
 render() {
     
     return (<Card className="mb-4" >
-    {/* <CardHeader className="border-bottom"  style={{background: "#da2821"}}>
-    </CardHeader> */}
+    <CardHeader className="border-bottom" >
+    </CardHeader>
     <CardBody className="p-0 pb-3">
     <table className="table mb-0 text-center">
     <thead className="bg-light">
