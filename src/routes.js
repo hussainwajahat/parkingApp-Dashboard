@@ -14,6 +14,7 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
+import AddSlot from "./views/AddSlot"
 
 export default [
   {
@@ -63,8 +64,13 @@ export default [
     component: Tables
   },
   {
-    path: "/blog-posts",
+    path: "/slots",
     layout: DefaultLayout,
     component: BlogPosts
+  },
+  {
+    path: "/add-slot",
+    layout: DefaultLayout,
+    component: AddSlot
   }
 ];

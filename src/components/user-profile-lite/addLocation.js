@@ -1,5 +1,6 @@
 import React,{ Component } from "react";
-import PropTypes from "prop-types";
+import history from '../../utils/history';
+
 import {
   Card,
   CardHeader,
@@ -34,22 +35,22 @@ export default class AddLocation extends Component {
     }
     handleLocationChange(event) {
       this.setState({location: event.target.value});
-   }
+  }
 
 
 handleAddSocial(event) {
   this.setState({slots: event.target.value});
-     this.setState({
+    this.setState({
       SlotsData: this.state.SlotsData.concat({startTime:"",endTime:"",isFilled:false})
-     });
+    });
   }
 
 handleStartChange(ev,idx){
- const newD = this.state.SlotsData.map((startTime, sidx)=>{
+const newD = this.state.SlotsData.map((startTime, sidx)=>{
   if(idx !== sidx) return startTime;
   return {...startTime, startTime :ev.target.value}
 })
- this.setState({SlotsData: newD})
+this.setState({SlotsData: newD})
 }
 handleEndChange(ev,idx){
   const newD = this.state.SlotsData.map((endTime, sidx)=>{
@@ -76,12 +77,7 @@ handleSubmit = evt => {
 };
 fetch('http://localhost:3000/locations/addLocations', requestOptions)
   .then(response => {
-      return response.json();
-  })
-  .then((response) => {
-    console.log(response)
-      debugger
-    
+      return history.push('/slots');
   })
   .catch(error =>{
       console.log(error)
@@ -155,7 +151,7 @@ handleRemoveSlot = idx => () => {
                 </Col>
               </Row>
             ))}
-              <Button>Update & Save</Button>
+              <Button>Add Location</Button>
             </Form>
           </Col>
         </Row>

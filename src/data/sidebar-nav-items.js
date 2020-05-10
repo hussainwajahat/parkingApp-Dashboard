@@ -7,9 +7,9 @@ export default function() {
       htmlAfter: ""
     },
     {
-      title: "Add Slots",
+      title: "Slots",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts",
+      to: "/slots",
     },
     {
       title: "Update Slots",
