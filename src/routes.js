@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
 
 // Route Views
-import Login from './views/Login';
+import Login from './views/login';
 import signUp from './views/signUp'
 import BlogOverview from "./views/BlogOverview";
 import UserProfileLite from "./views/UserProfileLite";
@@ -14,6 +14,7 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
+import AddSlot from "./views/AddSlot"
 
 export default [
   {
@@ -67,8 +68,13 @@ export default [
     component: Tables
   },
   {
-    path: "/blog-posts",
+    path: "/slots",
     layout: DefaultLayout,
     component: BlogPosts
+  },
+  {
+    path: "/add-slot",
+    layout: DefaultLayout,
+    component: AddSlot
   }
 ];

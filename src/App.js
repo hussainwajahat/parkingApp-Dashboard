@@ -8,13 +8,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
 
 
- class App extends Component{
+class App extends Component{
   constructor(props) {
     super(props);
     this.state ={
-       nofooter:Boolean,
-       noside:Boolean,
-       noheader:Boolean
+      nofooter:Boolean,
+      noside:Boolean,
+      noheader:Boolean
     }
     
 }
