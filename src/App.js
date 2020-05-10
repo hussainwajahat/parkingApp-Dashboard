@@ -49,7 +49,7 @@ componentDidMount(){
 }
  render(){
  return(
-  <Router basename={process.env.REACT_APP_BASENAME || "Park X Dashboard"}>
+  <Router basename={process.env.REACT_APP_BASENAME}>
     <div>
       
       {routes.map((route, index) => {
