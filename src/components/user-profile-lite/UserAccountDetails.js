@@ -15,6 +15,13 @@ import {
   Button
 } from "shards-react";
 
+/*
+  TODO:
+    - button should be label as add not update & save
+    - after ajax call when i click on add it redirects me to some page and goes with error
+    - listing of added slots shall be redirected
+*/
+
 const UserAccountDetails = ({ title }) => (
   <Card small className="mb-4">
     <CardHeader className="border-bottom">

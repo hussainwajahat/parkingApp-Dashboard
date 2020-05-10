@@ -40,15 +40,15 @@ export default class AddLocation extends Component {
 handleAddSocial(event) {
   this.setState({slots: event.target.value});
      this.setState({
-       SlotsData: this.state.SlotsData.concat({startTime:"",endTime:"",isFilled:false})
+      SlotsData: this.state.SlotsData.concat({startTime:"",endTime:"",isFilled:false})
      });
   }
 
 handleStartChange(ev,idx){
  const newD = this.state.SlotsData.map((startTime, sidx)=>{
-   if(idx !== sidx) return startTime;
-   return {...startTime, startTime :ev.target.value}
- })
+  if(idx !== sidx) return startTime;
+  return {...startTime, startTime :ev.target.value}
+})
  this.setState({SlotsData: newD})
 }
 handleEndChange(ev,idx){
@@ -57,7 +57,7 @@ handleEndChange(ev,idx){
     return {...endTime, endTime :ev.target.value}
   })
   this.setState({SlotsData: newD})
- }
+}
 
 handleSubmit = evt => {
   evt.preventDefault();
@@ -71,13 +71,17 @@ handleSubmit = evt => {
   debugger
   const requestOptions = {
     method: 'POST',
-    headers: { 'Accept': 'application/json' },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
 };
-fetch('https://parking-app-api.herokuapp.com/locations/addLocations', requestOptions)
-    .then(response => {
-      console.log(response)
+fetch('http://localhost:3000/locations/addLocations', requestOptions)
+  .then(response => {
+      return response.json();
+  })
+  .then((response) => {
+    console.log(response)
       debugger
+    
   })
   .catch(error =>{
       console.log(error)
