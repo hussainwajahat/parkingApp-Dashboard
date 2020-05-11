@@ -1,4 +1,5 @@
 <p align="center">
+  npm run start
 <a href="https://designrevision.com/downloads/shards-dashboard-lite-react/">
 <img src="assets/preview.png" width="250" />
 </a>
