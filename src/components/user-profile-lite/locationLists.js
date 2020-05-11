@@ -19,12 +19,10 @@ constructor(props) {
 
 componentDidMount() {
 
-    fetch('http://localhost:3000/locations/')
+    fetch(`${process.env.REACT_APP_BASEURL}/locations/`)
     .then(response => response.json())
     .then(data =>     { 
-    
-        this.setState({ Location: data }) } )
-
+        this.setState({ Location: data.model }) } )
     };
 render() {
     
@@ -47,7 +45,7 @@ render() {
     </tr>
     </thead>
     <tbody>
-    {this.state.Location && this.state.Location.map((post, idx) => (
+    {this.state.Location.length > 0 && this.state.Location.map((post, idx) => (
         <tr>
         <td>{post.name}</td>
         <td>{post.slotsData.length}</td>
