@@ -35,25 +35,35 @@ class Login extends React.Component {
       }
     }
     handleLogin = (event) => {
-      event.preventDefault()
-      console.log(this.state)
-      const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:  JSON.stringify(this.state)
-    };
-      fetch(`${process.env.REACT_APP_BASEURL}/login`,requestOptions)
-      .then(response => {
-          return response.json();
-      })
-      .then((response) => {
-        console.log(response)
-        sessionStorage.setItem('auth',response)
-        this.props.history.push("/dashboard")
-      })
-      .catch(error =>{
-          console.log(error)
-      })
+
+let email = this.state.email ;
+let password = this.state.password ;
+event.preventDefault()
+
+      if(email !=="" && password !== ""){
+
+        const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:  JSON.stringify(this.state)
+      };
+        fetch(`${process.env.REACT_APP_BASEURL}/login`,requestOptions)
+        .then(response => {
+            return response.json();
+        })
+        .then((response) => {
+          if(response===false){
+          alert("Email or Password is incorrect")
+          }else{
+            sessionStorage.setItem('auth',response)
+            this.props.history.push("/dashboard")
+          }
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+      } 
+    
     }
     
   
