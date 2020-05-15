@@ -7,14 +7,14 @@ import { DefaultLayout } from "./layouts";
 // Route Views
 import Login from './views/login';
 import signUp from './views/signUp'
+import BlogPosts from "./views/blogPosts";
+import AddSlot from "./views/addSlot"
 import AddNewPost from "./views/addNewPost";
 import BlogOverview from "./views/blogOverview";
 import UserProfileLite from "./views/userProfileLite";
 import Errors from "./views/errors";
 import ComponentsOverview from "./views/componentsOverview";
 import Tables from "./views/tables";
-import BlogPosts from "./views/blogPosts";
-import AddSlot from "./views/addSlot"
 
 export default [
   {
