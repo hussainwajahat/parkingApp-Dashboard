@@ -5,7 +5,7 @@ import routes from "./routes";
 import withTracker from "./withTracker";
 import {withRouter} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import "https://designrevision.com/demo/shards-dashboard-lite/styles/shards-dashboards.1.1.0.min.css";
+import "./assets/shards-dashboards.1.1.0.min.css";
 
 
 class App extends Component{
