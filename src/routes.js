@@ -5,16 +5,16 @@ import { Redirect } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
 
 // Route Views
-import Login from './views/login';
-import signUp from './views/signUp';
-import BlogOverview from "./views/blogOverview";
-import BlogPosts from "./views/blogPosts";
-import AddSlot from "./views/addSlot"
-import AddNewPost from "./views/addNewPost";
-import UserProfileLite from "./views/userProfileLite";
-import Errors from "./views/errors";
-import ComponentsOverview from "./views/componentsOverview";
-import Tables from "./views/tables";
+import Login from './views/Login';
+import signUp from './views/SignUp';
+import BlogOverview from "./views/BlogOverview";
+import BlogPosts from "./views/BlogPosts";
+import AddSlot from "./views/AddSlot"
+import AddNewPost from "./views/AddNewPost";
+import UserProfileLite from "./views/UserProfileLite";
+import Errors from "./views/Errors";
+import ComponentsOverview from "./views/ComponentsOverview";
+import Tables from "./views/Tables";
 
 export default [
   {

@@ -3,9 +3,6 @@ import { Container, Row, Col } from "shards-react";
 
 import PageTitle from "../components/common/PageTitle";
 import Editor from "../components/user-profile-lite/AddLocation";
-import SidebarActions from "../components/add-new-post/SidebarActions";
-import SidebarCategories from "../components/add-new-post/SidebarCategories";
-
 const AddNewPost = () => (
   <Container fluid className="main-content-container px-4 pb-4">
     {/* Page Header */}
