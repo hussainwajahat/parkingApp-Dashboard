@@ -1,6 +1,6 @@
 
 import React from "react";
-import LocationList from "../components/user-profile-lite/LocationLists";
+import LocationList from "../components/user-profile-lite/locationLists";
 import {
   Container,
   Row,
@@ -10,7 +10,7 @@ import {
 
 import PageTitle from "../components/common/PageTitle";
 
-class AddSlot extends React.Component {
+class BlogPosts extends React.Component {
   constructor(props) {
     super(props);
 
@@ -43,4 +43,4 @@ class AddSlot extends React.Component {
   }
 }
 
-export default AddSlot;
+export default BlogPosts;

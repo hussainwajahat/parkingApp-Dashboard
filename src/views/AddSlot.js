@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from "react";
-import AddLocation from "../components/user-profile-lite/AddLocation";
+import AddLocation from "../components/user-profile-lite/addLocation";
 import {
     Container,
     Col,
@@ -10,7 +10,7 @@ import {
 
 import PageTitle from "../components/common/PageTitle";
 
-class BlogPosts extends React.Component {
+class AddSlot extends React.Component {
 constructor(props) {
     super(props);
 
@@ -39,4 +39,4 @@ render() {
 }
 }
 
-export default BlogPosts;
+export default AddSlot;
