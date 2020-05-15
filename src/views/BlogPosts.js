@@ -1,6 +1,6 @@
 
 import React from "react";
-import LocationList from "../components/user-profile-lite/locationLists";
+import LocationList from "../components/user-profile-lite/LocationLists";
 import {
   Container,
   Row,
