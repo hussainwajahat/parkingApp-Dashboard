@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import { DefaultLayout } from "./layouts";
 
 // Route Views
+import LoginUser from "./views/LoginUser";
 import BlogOverview from "./views/BlogOverview";
 import UserProfileLite from "./views/UserProfileLite";
 import AddNewPost from "./views/AddNewPost";
@@ -18,12 +19,17 @@ export default [
     path: "/",
     exact: true,
     layout: DefaultLayout,
-    component: () => <Redirect to="/blog-overview" />
+    component: () => <Redirect to="/login" />
   },
   {
     path: "/blog-overview",
     layout: DefaultLayout,
     component: BlogOverview
+  },
+  {
+    path: "/login",
+    layout: DefaultLayout,
+    component: LoginUser
   },
   {
     path: "/user-profile-lite",
